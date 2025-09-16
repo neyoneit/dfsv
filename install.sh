@@ -1,8 +1,9 @@
-apt update && apt -y install docker.io docker-compose unzip wget nano nfs-common
-service docker start
+apt update && apt -y install unzip wget nano nfs-common
 base=$(pwd)/servers/base/
 
-mkdir ./{maps,data}
+mkdir ./{maps,data,nfs}
+mkdir -p nfs/maps
+mkdir -p servers/base/logs
 mkdir $base/baseq3
 mkdir maps
 rm -rf temp && mkdir temp
