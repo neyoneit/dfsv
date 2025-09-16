@@ -13,10 +13,10 @@ printf "\nServer Hostname: $SV_BASE_HOSTNAME\nAdmin: $ADMIN_NAME\nRcon Password:
 echo "Setting up native server environment..."
 
 # Mount NFS maps if not already mounted
-if ! mountpoint -q ./nfs/maps; then
+if ! mountpoint -q ./servers/base/baseq3/maps; then
     echo "Mounting NFS maps directory..."
-    sudo mkdir -p ./nfs/maps
-    sudo mount -t nfs -o nolock,soft,timeo=30 173.212.241.188:/maps/bsp ./nfs/maps
+    sudo mkdir -p ./servers/base/baseq3/maps
+    sudo mount -t nfs -o nolock,soft,timeo=30 173.212.241.188:/maps/bsp ./servers/base/baseq3/maps
     if [ $? -eq 0 ]; then
         echo "NFS maps mounted successfully"
     else
