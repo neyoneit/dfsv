@@ -70,7 +70,7 @@ volumes:
   maps:
     driver_opts:
       type: \"nfs\"
-      o: \"addr=212.24.100.183,ac,actimeo=9999\"
+      o: \"addr=173.212.241.188,ac,actimeo=9999\"
       device: \":/nfs/bsp\"
 " >> docker-compose.yml 2>&1
 read -p "Start servers now? (Y/n): " $REPLY
