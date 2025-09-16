@@ -71,7 +71,7 @@ volumes:
     driver_opts:
       type: \"nfs\"
       o: \"addr=173.212.241.188,ac,actimeo=9999\"
-      device: \":/nfs/bsp\"
+      device: \":/maps/bsp\"
 " >> docker-compose.yml 2>&1
 read -p "Start servers now? (Y/n): " $REPLY
 if [[ $REPLY =~ ^[Yy]$ ]]
