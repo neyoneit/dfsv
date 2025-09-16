@@ -1,11 +1,16 @@
 [Unit]
-Description=Defrag server container
-Requires=docker.service
-After=docker.service
+Description=Defrag servers (native)
+After=network-online.target
+Wants=network-online.target
 
 [Service]
-Type=simple
-ExecStart=sudo docker-compose -f /home/ubuntu/dfsv/docker-compose.yml up -d
+Type=forking
+WorkingDirectory=/home/ubuntu/dfsv
+ExecStart=/home/ubuntu/dfsv/launch-native.sh
+ExecStop=/home/ubuntu/dfsv/stop-native.sh
+User=root
+Restart=on-failure
+RestartSec=5
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target

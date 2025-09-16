@@ -1,7 +1,8 @@
-Minimum requirements: 
+Minimum requirements:
 - 64 bit Debian-based Linux system
 - 150 * # of servers MB of RAM
 - 1.5 GB of free storage
+- NFS client support (nfs-common package)
 
 **Renting a VPS (*If you have your linux system ready, feel free skip ahead to the next section*)**
 
@@ -25,14 +26,14 @@ Options:
 - `ssh root@ipofyourinstance`
 - Enter the password, proceed to next section.
 
-**Deploying the servers**
+**Deploying the servers (Native/No-Docker)**
 1. In your linux system, execute the following lines
-- `git clone https://github.com/JBustos22/dfsv.git`
+- `git clone https://github.com/neyoneit/dfsv.git -b nodocker`
 - `cd dfsv`
 - `sudo ./install.sh`
-- `./launch.sh`
+- `./launch-native.sh`
 2. Follow the instructions on the command line
-3. Run docker ps -a to see the running servers if you chose to start them
+3. Check running servers with `ps aux | grep oDFe.ded`
 4. Connect to `your instance's ip:port` through a defrag client
 
 **Customization**
@@ -45,8 +46,8 @@ Options:
  - To modify the suffixes (- mixed 1, mixed 2, teamruns 1, etc.) Modify the "Server suffixes" block.
 4. Once ready, press Ctrl + x
 8. Type 'y', then press 'Enter'
-9. rerun `./launch.sh` and to apply changes
-10. run `docker ps -a` to see your deployed servers and their ports
+9. rerun `./launch-native.sh` and to apply changes
+10. run `ps aux | grep oDFe.ded` to see your running servers and their ports
 
 **Uploading maps**
 
