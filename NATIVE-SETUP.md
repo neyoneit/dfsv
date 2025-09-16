@@ -4,8 +4,9 @@ This branch contains a native implementation of DFSV that runs without Docker co
 
 ## Installation
 
-1. Run the installation script:
+1. Make scripts executable and run the installation script:
 ```bash
+chmod +x *.sh
 sudo ./install.sh
 ```
 
