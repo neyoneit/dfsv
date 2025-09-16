@@ -29,6 +29,7 @@ Options:
 1. In your linux system, execute the following lines
 - `git clone https://github.com/JBustos22/dfsv.git`
 - `cd dfsv`
+- `chmod +x *.sh` (make scripts executable)
 - `sudo ./install.sh`
 - `./launch.sh`
 2. Follow the instructions on the command line

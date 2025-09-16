@@ -35,7 +35,7 @@ for sv_type in mixed cpm vq3 fastcaps teamruns freestyle;do
       - \"${curr_port}:${curr_port}/tcp\"
     volumes:
       - base:/dfsv
-      - maps:/dfsv/nfs/maps
+      - maps:/dfsv/baseq3/maps
     restart: always
     environment:
       - MDD_ENABLED=${MDD_ENABLED}
