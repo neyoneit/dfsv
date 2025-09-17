@@ -10,7 +10,7 @@ seta rconPassword \"$SV_RCON\"
 seta sv_hostname \"$SV_HOSTNAME\"
 seta df_sv_script_idleCfg \"${NAME_ID}/main.cfg\"
 seta g_log \"${NAME_ID}/${NAME_ID}.log\"
-" > defrag/$NAME_ID/main.cfg 2>&1
+" >> defrag/$NAME_ID/main.cfg 2>&1
 
 if [ $MDD_ENABLED -eq 1 ]
 then
